@@ -40,7 +40,6 @@ class Path2EReg {
 			index = 0,
 			path = '';
 
-		try
 		matcher.map(str, function (matcher) {
 			function matched(index)
 				return try matcher.matched(index) catch(e: Dynamic) null;
@@ -88,10 +87,7 @@ class Path2EReg {
 			}));
 			
 			return '';
-		})
-		catch(e: Dynamic) {
-			trace(str);
-		}
+		});
 		
 		if (index < str.length)
 			path += str.substr(index);
