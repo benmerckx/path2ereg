@@ -1,0 +1,10 @@
+{
+  "name": "path2ereg",
+  "url" : "https://github.com/benmerckx/path2ereg",
+  "license": "MIT",
+  "tags": ["cross", "web"],
+  "description": "Haxe port of path-to-regexp",
+  "version": "0.0.0",
+  "releasenote": "Init",
+  "contributors": ["benmerckx"]
+}
