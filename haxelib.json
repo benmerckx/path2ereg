@@ -4,7 +4,7 @@
   "license": "MIT",
   "tags": ["cross", "web"],
   "description": "Haxe port of path-to-regexp",
-  "version": "0.0.0",
-  "releasenote": "Init",
+  "version": "0.1.0",
+  "releasenote": "Java compatibility",
   "contributors": ["benmerckx"]
 }

@@ -213,11 +213,21 @@ class Path2EReg {
 		}
 	}
 	
-	static function escapeGroup(group: String)
-		return ~/([=!:$\/()])/g.replace(group, '\\$1');
+	static function escapeGroup(group: String) {
+		var chars = '=!:$/()'.split('');
+		for (char in chars)
+			group = StringTools.replace(group, char, '\\$char');
+		return group;
+		//return ~/([=!:$\/()])/g.replace(group, '\\$1');
+	}
 		
-	static function escapeString(str: String)
-		return ~/([.+*?=^!:${}()[\]|\/\\])/g.replace(str, '\\$1');
+	static function escapeString(str: String) {
+		var chars = '\\.+*?=^!:${}()[]|/'.split('');
+		for (char in chars)
+			str = StringTools.replace(str, char, '\\$char');
+		return str;
+		//return ~/([.+*?=^!:${}()[\]|\/\\])/g.replace(str, '\\$1');
+	}
 		
 	static function flags(options)
 		return options.sensitive ? '' : 'i';
