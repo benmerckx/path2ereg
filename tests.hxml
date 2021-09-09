@@ -1,3 +1,5 @@
--cp tests
--lib buddy
--main RunTests
+-cp src
+-lib helder.unit
+-D helder.unit.package=tests
+-main helder.Unit
+--interp
